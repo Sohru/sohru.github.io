@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow, noimageindex" />
+    <meta name="googlebot" content="noindex, nofollow, noimageindex" />
+
+
+    <!-- CSS-tiedostot -->
+    <link rel="stylesheet" media="screen and (min-width: 952px)" type="text/css" href="styles/layout.css">
+    <link rel="stylesheet" media="screen and (max-width: 951px)" type="text/css" href="styles/layout-min.css">
+    
+    <!-- Fontit -->
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai%7CDidact+Gothic%7CPermanent+Marker" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    
+    <title>Siiri Kuhmonen - Etusivu</title>
+</head>
+
+<!--Sivun alku-->
+<main>
+    <!--Tietokoneversion header-->
+    <header class="dt">
+        <img class="headerdt" src="img/header-dt.png" alt="Siiri Kuhmonen">
+    </header>
+    
+    <!--Mobiiliversion header-->
+    <header class="mobile">
+        <img class="headermob" src="img/header-mob.png" alt="Siiri Kuhmonen">    
+    </header>
+        
+        <!-- Tietokoneversion valikko -->
+        <nav class="dt">
+            <a class="activenav" href="index.html">Etusivu</a>
+            <a href="esittely.html">Esittely</a>
+            <button class="dropdown">Harrastukset
+                <i class="fas fa-angle-down"></i>
+            </button>
+                <div class="dropdown-con">
+                    <a class="dropnav" href="videopelit.html">Videopelit</a>
+                    <a class="dropnav" href="neulominen.html">Neulominen</a>
+                </div>        
+            <a href="portfolio.html">Portfolio</a>
+        </nav>
+    
+        <!--Mobiilivalikko-->
+        <nav class="mobile">
+            <a class="activenav" href="index.html">Etusivu</a>
+            <a href="esittely.html">Esittely</a>
+            <div class="dd-mobile">
+                <button class="button" onclick="mobileNav()">Harrastukset 
+                    <i class="fa fa-angle-down"></i>
+                </button>
+                    <div class="dd-con-mob" id="mob-dd">
+                        <a href="videopelit.html">Videopelit</a>
+                        <a href="neulominen.html">Neulominen</a>
+                    </div>
+            </div>
+            <a href="portfolio.html">Portfolio</a>
+        </nav>
+    
+    <!--Sisältö alkaa-->  
+    <div class="content">
+        <section class="main">
+            <h2>Tervetuloa</h2>
+            <br>
+            <p>
+                Tämä sivusto on luotu portfolioksi osana Jyväskylän Ammattikorkeakoulun Web-tekniikat -kurssia.
+            </p>
+            <p>
+                Tältä sivustolta löydät esittelyn minusta ja harrastuksistani sekä hieman tietoa aikaisemmasta kokemuksestani.
+            </p>           
+        </section>
+    </div>
+    
+    <!--Sisältö päättyy, footer alkaa-->    
+    <footer>
+        Ota yhteyttä: 
+        siirikuhmonen<i class="fas fa-at"></i>gmail.com
+    </footer>    
+<!--Footer päättyy, sivun loppu-->
+    
+<script>
+    /* Valikon painikkeen scripti */
+    var dropdown = document.getElementsByClassName("dropdown");
+    var i;
+    for (i = 0; i < dropdown.length; i++) 
+    {
+        dropdown[i].addEventListener("click", function() 
+            {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") 
+                    {
+                        dropdownContent.style.display = "none";
+                    } 
+                else 
+                {
+                    dropdownContent.style.display = "block";
+                }
+            });
+    }
+    
+    /* Mobiilivalikon painikkeen scritpi */    
+    function mobileNav() 
+    {
+        document.getElementById("mob-dd").classList.toggle("show");                   
+    }
+
+        window.onclick = function(e) 
+        {
+            if (!e.target.matches('.button')) 
+            {
+                var mobdd = document.getElementById("mob-dd");
+                if (mobdd.classList.contains('show')) 
+                {
+                    mobdd.classList.remove('show');
+                }
+            }
+        }
+</script>
+</main>

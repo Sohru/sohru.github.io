@@ -1,0 +1,388 @@
+/* Perus sisältöasetukset */
+
+html
+{
+    font-size: calc(1em + 1vw)   
+}
+
+body 
+{
+    font-family: Arial, sans-serif, cursive;
+    text-align: left;
+    background-color: #1c4d41;
+    margin: 0; 
+}
+  
+main 
+{
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+/* Header */
+
+header.mobile
+{
+    max-height: 40vh;
+    padding: 1vw 0;
+    padding-left: 2.5vw;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+    top: 0;
+    background-color: #2e7a68;
+    border-bottom: 2px solid #1c4d41;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+img.headermob
+{
+    max-height: 30vh;
+    max-width: 98%;    
+    position: static;
+}
+
+/* Footer */
+
+footer
+{
+    height: 6vh;
+    width: 100vw;
+    background-color: #2e7a68;
+    color: #000000;
+    text-align: center;
+    font-size: 0.8rem;
+    bottom: 0;
+    position: absolute;
+    padding-top: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+/* Mobiilivalikko */
+
+nav.mobile 
+{
+    overflow: hidden;
+    background-color: #2e7a68;
+    max-height: 6vh;
+    box-sizing: border-box;
+}
+
+nav.mobile a 
+{
+    float: left;
+    font-size: 80%;
+    color: #000000;
+    text-align: center;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+.dd-mobile 
+{
+    float: left;
+    overflow: hidden;    
+}
+
+.dd-mobile .button 
+{
+    cursor: pointer;
+    font-size: 80%;  
+    border: none;
+    outline: none;
+    color: #000000;
+    padding: 0.5em 1em;
+    background-color: #2e7a68;
+    margin: 0;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+
+nav.mobile a:hover, .dd-mobile:hover .button, .button:focus 
+{
+    text-shadow:5px 3px 10px #34d889;
+}
+
+.dd-con-mob 
+{
+    display: none;
+    position: absolute;
+    background-color: #3ca38b;
+    min-width: 10vw;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dd-con-mob a 
+{
+    float: none;
+    color: black;
+    padding: 0.75em 1em;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dd-con-mob a:hover 
+{
+    text-shadow:5px 3px 10px #34d889;
+}
+
+.activenav 
+{
+    background-color: #1c4d41;
+}
+
+.activedrop
+{
+    background-color: #44b69b;
+}
+
+.show
+{
+    display: block;
+}
+
+.fa-angle-down 
+{
+    float: right;
+    padding-left: 0.5em;
+    padding-top: 0.2em;
+}
+
+/* Sisältö */ 
+
+div.content
+{
+    float: left;
+    min-height: 40vh;
+    width: 100%;
+    background-color: #1c4d41;
+    margin-top: 2vw;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+
+section.main
+{
+    min-height: 50vh;
+    max-height: 60vh;
+    background-color: #3ca38b;
+    opacity: 0.7;
+    margin: 2vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    padding: 1em;
+    border: 0.2em dotted #2a9068;
+    border-radius: 15px;  
+    overflow: hidden;
+    clear: both;
+    box-sizing: border-box;
+    
+}
+
+/* Portfolion asettelu ja nappulat */
+
+.left
+{
+    width: 47vw;
+    min-height: 4vh;
+    max-height: 80vh;
+    float: left;
+    background-color: #3ca38b;
+    opacity: 0.8;
+    margin: 2vw 1vw;
+    padding: 0 0.5em 0 0.5em;
+    border: 0.2em dotted #2e7a68;
+    border-radius: 15px;  
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.right
+{
+    width: 47vw;
+    min-height: 4vh;
+    max-height: 80vh;
+    float: right;
+    background-color: #3ca38b;
+    opacity: 0.8;
+    margin: 2vw 1vw;
+    padding: 0 0.5em 0.2em 0.5em;
+    border: 0.2em dotted #2e7a68;
+    border-radius: 15px;  
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.PL
+{
+    background-color: #3ca38b;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.1em;
+    text-align: center;
+    margin-top: 0.3em;
+    margin-left: 0;
+    padding-left: 0.5em;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+.PR
+{
+    background-color: #3ca38b;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 0.3em;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+#leftcontent
+{
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 0.7em;
+    color: #000000;
+}
+
+#rightcontent
+{
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 0.7em;
+    color: #000000;
+}
+
+/* Esittelyn kuva */
+
+a.oma
+{
+    float: right;
+    display: inline;
+    margin-right: 1vw;
+    box-sizing: border-box;
+}
+
+img.oma
+{
+    min-width: 10vh;
+    max-width: 13vh;
+    border: 2px solid white;
+}
+
+/* Muut kuvat */
+
+a.muu
+{
+    float: left;
+    margin-right: 0;
+    box-sizing: border-box;
+}
+
+img.muu
+{
+    border: 2px solid white;
+}
+
+img.muu:focus
+{
+    opacity: 0.8;
+}
+
+.pics
+{
+    clear: both;
+    padding-left: 0.5em;
+    padding-top: 1em;
+}
+
+/* Tekstien muotoilut */
+
+h2
+{
+    color: #000000;
+    padding-left: 0.5em;
+    font-size: 1em;
+    text-decoration: underline;
+    font-family: 'Permanent Marker', cursive;
+}
+
+h3
+{
+    color: #000000;
+    padding-left: 0.6em;
+    font-size: 1em;
+    font-family: 'Permanent Marker', cursive;
+    margin-bottom: 1%;
+}
+
+h4.right
+{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 0.2em;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-left: 3em;
+    color: #000000;
+    border: none;
+}
+
+p
+{
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 0.8em;
+    padding-left: 1em;
+    color: #000000;
+}
+
+p.es
+{
+    float: left;
+    margin: 0.5em;
+    margin-right: 0;
+    max-width: 50vw;
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 0.75em;
+    padding-left: 0.3em;
+    color: #000000;
+    overflow: auto;
+}
+
+
+dl
+{
+    margin-top: 0.2em;
+    padding-left: 0.5em;
+}
+
+/* Media-asetukset */
+
+@media only screen and (max-width: 951px)
+{
+   
+    nav.dt
+    {
+        display: none;
+    }
+    
+    header.dt
+    {
+        display: none;
+    }
+        
+}  
