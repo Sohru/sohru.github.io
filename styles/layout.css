@@ -168,10 +168,11 @@ section.main
 .left
 {
     width: 65vw;
-    height: 73vh;
+    height: 70vh;
     float: left;
     background-color: #3ca38b;
     opacity: 0.8;
+    margin-top: 1vw;
     margin-right: 1vw;
     padding: 0 0.5em 0.2em 1em;
     border: 0.2em dotted #2e7a68;
