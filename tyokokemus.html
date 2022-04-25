@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow, noimageindex" />
+    <meta name="googlebot" content="noindex, nofollow, noimageindex" />
+    
+    <!-- CSS-tiedostot -->
+    <link rel="stylesheet" media="screen and (min-width: 952px)" type="text/css" href="styles/layout.css">
+    <link rel="stylesheet" media="screen and (max-width: 951px)" type="text/css" href="styles/layout-min.css">
+    
+    <!-- Fontit -->
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai%7CDidact+Gothic%7CPermanent+Marker" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    
+    <title>Siiri Kuhmonen - Portfolio</title>
+</head>
+
+<!--Sivun alku-->
+<main>
+    <!--Tietokoneversion header-->
+    <header class="dt">
+        <img class="headerdt" src="img/header-dt.png" alt="Siiri Kuhmonen">
+    </header>
+    
+    <!--Mobiiliversion header-->
+    <header class="mobile">
+        <img class="headermob" src="img/header-mob.png" alt="Siiri Kuhmonen">    
+    </header>
+        
+        <!-- Tietokoneversion valikko -->
+        <nav class="dt">
+            <a href="index.html">Etusivu</a>
+            <a href="esittely.html">Esittely</a>
+            <button class="dropdown">Portfolio
+                <i class="fas fa-angle-down"></i>
+            </button>
+                <div class="dropdown-con">
+                    <a class="dropnav" href="koulutus.html">Koulutus</a>
+                    <a class="dropnav" href="tyokokemus.html">Työkokemus</a>
+                </div>        
+        </nav>
+
+        <!--Mobiilivalikko-->
+        <nav class="mobile">
+            <a href="index.html">Etusivu</a>
+            <a href="esittely.html">Esittely</a>
+            <div class="dd-mobile">
+                <button class="button" onclick="mobileNav()">Harrastukset 
+                <i class="fa fa-angle-down"></i>
+                </button>
+                    <div class="dd-con-mob" id="mob-dd">
+                        <a href="koulutus.html">Koulutus</a>
+                        <a href="tyokokemus.html">Työkokemus</a>
+                    </div>
+            </div>
+        </nav>
+    
+    <!--Sisältö alkaa-->  
+    <div class="content">
+        <div class="left">
+            <h1 class="title">Työkokemus</h1>
+                <div id="Acontent">
+                    <dl>
+                        <dt><b>Volvo Finland AB</b></dt>
+                            <dd>Harjoittelu, AMK: IT-harjoittelija, 01/2022-10/2022</dd>
+                        <dt><b>Keski-Suomen Yhteisöjen Tuki osk</b></dt>
+                            <dd>Työkokeilu: taloushallinnon harjoittelija,<br /> 5/2018-11/2018</dd>
+                        <dt><b>Nuortentalo Katutaso</b></dt>
+                            <dd>Työkokeilu: tilatyöharjoittelija, 6/2017-10/2017</dd>
+                        <dt><b>EkoCenter Muurame</b></dt>
+                            <dd>Kirpputorityöntekijä, 9/2016-2/2017</dd>
+                        <dt><b>EkoCenter Muurame</b></dt>
+                            <dd>Työkokeilu: kirpputorityöntekijä, 6/2016-8/2016</dd>
+                    </dl>
+                </div>           
+        </div>
+    </div>
+    <!--Sisältö päättyy, footer alkaa-->    
+    <footer>
+        
+    </footer>    
+<!--Footer päättyy, sivun loppu-->
+    
+<script>
+    /* Valikon painikkeen scripti */
+    var dropdown = document.getElementsByClassName("dropdown");
+    var i;
+    for (i = 0; i < dropdown.length; i++) 
+    {
+        dropdown[i].addEventListener("click", function() 
+            {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") 
+                    {
+                        dropdownContent.style.display = "none";
+                    } 
+                else 
+                {
+                    dropdownContent.style.display = "block";
+                }
+            });
+    }
+    
+    /* Mobiilivalikon painikkeen scritpi */    
+    function mobileNav() 
+    {
+        document.getElementById("mob-dd").classList.toggle("show");                   
+    }
+
+        window.onclick = function(e) 
+        {
+            if (!e.target.matches('.button')) 
+            {
+                var mobdd = document.getElementById("mob-dd");
+                if (mobdd.classList.contains('show')) 
+                {
+                    mobdd.classList.remove('show');
+                }
+            }
+        }
+    
+    /* function AFunction() 
+    {
+        var a = document.getElementById("Acontent");
+        if (a.style.display === "none") 
+        {
+            a.style.display = "block";            
+        } 
+        else 
+        {
+            a.style.display = "none";            
+        }
+    } 
+    
+    function BFunction()
+    {
+        var b = document.getElementById("Bcontent");
+        if (b.style.display === "none") 
+        {
+            b.style.display = "block";
+        } 
+        else 
+        {
+            b.style.display = "none";
+        }
+    }    */
+</script>
+</main>
